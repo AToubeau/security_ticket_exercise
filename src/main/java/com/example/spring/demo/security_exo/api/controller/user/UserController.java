@@ -1,14 +1,11 @@
 package com.example.spring.demo.security_exo.api.controller.user;
 
-import com.example.spring.demo.security_exo.api.model.user.CreateUserResponseBody;
 import com.example.spring.demo.security_exo.api.model.user.UserDetailResponseBody;
 import com.example.spring.demo.security_exo.bll.service.UserService;
 import com.example.spring.demo.security_exo.dal.domain.User;
-import com.example.spring.demo.security_exo.dal.domain.enums.RoleUser;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

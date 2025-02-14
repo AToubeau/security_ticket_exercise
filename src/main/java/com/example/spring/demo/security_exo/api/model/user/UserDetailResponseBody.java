@@ -1,7 +1,6 @@
 package com.example.spring.demo.security_exo.api.model.user;
 
 import com.example.spring.demo.security_exo.dal.domain.Role;
-import com.example.spring.demo.security_exo.dal.domain.Ticket;
 import com.example.spring.demo.security_exo.dal.domain.User;
 
 import java.util.Set;

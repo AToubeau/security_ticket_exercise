@@ -2,7 +2,6 @@ package com.example.spring.demo.security_exo.bll.service;
 
 import com.example.spring.demo.security_exo.api.model.user.CreateUserRequestBody;
 import com.example.spring.demo.security_exo.dal.domain.User;
-import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 

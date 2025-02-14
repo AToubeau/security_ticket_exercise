@@ -5,7 +5,6 @@ import com.example.spring.demo.security_exo.dal.domain.enums.Status;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 
 @Entity
 public class Ticket extends BaseEntity<Long> {
