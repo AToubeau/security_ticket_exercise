@@ -7,7 +7,6 @@ import com.example.spring.demo.security_exo.bll.service.TicketService;
 import com.example.spring.demo.security_exo.bll.service.UserService;
 import com.example.spring.demo.security_exo.dal.domain.Ticket;
 import com.example.spring.demo.security_exo.dal.domain.User;
-import com.example.spring.demo.security_exo.dal.domain.enums.Status;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;

@@ -26,19 +26,11 @@ public class User extends BaseEntity<Long> implements UserDetails {
     @JoinTable(name = "user_role")
     private Set<Role> roles;
 
-    @OneToMany(mappedBy = "userCreator")
-    private Set<Ticket> ticketsCreated;
-
-    @OneToMany(mappedBy = "userAssignedTo")
-    private Set<Ticket> ticketsAssigned;
-
     public User(String username, String email, String password, Set<Role> roles) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.roles = roles;
-        this.ticketsAssigned = new HashSet<>();
-        this.ticketsCreated = new HashSet<>();
     }
 
     public User(String username, String email, String password) {
@@ -46,14 +38,10 @@ public class User extends BaseEntity<Long> implements UserDetails {
         this.email = email;
         this.password = password;
         this.roles = new HashSet<>();
-        this.ticketsAssigned = new HashSet<>();
-        this.ticketsCreated = new HashSet<>();
     }
 
     public User() {
         this.roles = new HashSet<>();
-        this.ticketsAssigned = new HashSet<>();
-        this.ticketsCreated = new HashSet<>();
     }
 
     @Override
@@ -101,14 +89,6 @@ public class User extends BaseEntity<Long> implements UserDetails {
         return true;
     }
 
-/*    public String getLogin() {
-        return login;
-    }*/
-
-/*    public void setLogin(String login) {
-        this.login = login;
-    }*/
-
     public Set<Role> getRoles() {
         return roles;
     }
@@ -127,21 +107,5 @@ public class User extends BaseEntity<Long> implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Set<Ticket> getTicketsCreated() {
-        return ticketsCreated;
-    }
-
-    public void setTicketsCreated(Set<Ticket> ticketsCreated) {
-        this.ticketsCreated = ticketsCreated;
-    }
-
-    public Set<Ticket> getTicketsAssigned() {
-        return ticketsAssigned;
-    }
-
-    public void setTicketsAssigned(Set<Ticket> ticketsAssigned) {
-        this.ticketsAssigned = ticketsAssigned;
     }
 }
